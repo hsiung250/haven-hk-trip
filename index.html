@@ -4,34 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HAVEN 香港7日遊｜互動旅遊手冊</title>
+<meta name="description" content="HAVEN 香港7日遊互動旅遊手冊：每日行程、景點照片、景點介紹、Google Maps導航、住宿資訊與行前準備。">
 <style>
-:root{--navy:#06172b;--gold:#d8a23b;--gold2:#f5d38a;--bg:#eef2f6;--text:#172033;--muted:#6b7280}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;background:var(--bg);color:var(--text)}
-.hero{min-height:520px;color:white;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(4,15,31,.72),rgba(4,15,31,.62),rgba(4,15,31,.98)),url('https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center}
+:root{
+  --navy:#06172b;--navy2:#0b2748;--gold:#d8a23b;--gold2:#f5d38a;
+  --bg:#eef2f6;--text:#172033;--muted:#6b7280;--white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;background:var(--bg);color:var(--text)}
+.hero{min-height:540px;color:white;position:relative;background:linear-gradient(180deg,rgba(4,15,31,.68),rgba(4,15,31,.55),rgba(4,15,31,.96)),url('images/victoria-harbour.jpg');background-size:cover;background-position:center;overflow:hidden}
 .topbar{display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,5vw,70px)}
-.logo{width:96px;height:96px;object-fit:contain;filter:drop-shadow(0 8px 16px rgba(0,0,0,.45))}
-.brand{display:flex;gap:12px;align-items:center;font-weight:900}.brand small{display:block;color:var(--gold2);letter-spacing:3px}
+.logoBrand{display:flex;gap:12px;align-items:center;font-weight:900}.logo{width:96px;height:96px;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.45))}
+.logoBrand small{display:block;color:var(--gold2);letter-spacing:3px}
 .nav{display:flex;gap:22px}.nav a{color:white;text-decoration:none;font-weight:800}.nav a:hover{color:var(--gold2)}
-.heroContent{text-align:center;padding:30px 18px 115px}.kicker{color:var(--gold2);letter-spacing:10px;font-size:28px;font-weight:700}
+.heroContent{text-align:center;padding:35px 18px 120px}.kicker{color:var(--gold2);letter-spacing:10px;font-size:28px;font-weight:700}
 h1{font-size:clamp(52px,9vw,106px);letter-spacing:10px;margin:12px 0;text-shadow:0 10px 30px rgba(0,0,0,.55)}
-.subtitle{color:var(--gold2);letter-spacing:5px}.datePill{display:inline-block;margin-top:24px;border:1px solid rgba(245,211,138,.8);border-radius:999px;padding:12px 24px;background:rgba(0,0,0,.25);font-size:20px}
+.subtitle{color:var(--gold2);letter-spacing:5px}.datePill{display:inline-block;margin-top:24px;border:1px solid rgba(245,211,138,.85);border-radius:999px;padding:12px 24px;background:rgba(0,0,0,.25);font-size:20px}
 .quick{max-width:1120px;margin:-65px auto 0;background:#fff;border-radius:24px;box-shadow:0 18px 45px rgba(6,23,43,.16);display:grid;grid-template-columns:repeat(7,1fr);overflow:hidden;position:relative;z-index:4}
 .quick a{text-decoration:none;color:var(--navy);padding:20px 10px;text-align:center;border-right:1px solid #e5e7eb;font-weight:900}.quick a:last-child{border-right:0}.quick .icon{width:52px;height:52px;margin:0 auto 8px;border-radius:999px;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-size:24px}.quick span{display:block;color:var(--muted);font-size:13px;font-weight:500;margin-top:5px}
 main{max-width:1120px;margin:0 auto;padding:22px 18px 95px}.section{background:#fff;border-radius:22px;padding:24px;margin:22px 0;box-shadow:0 8px 30px rgba(6,23,43,.08)}.section h2{margin:0 0 18px;color:var(--navy);font-size:28px;display:flex;align-items:center;gap:10px}.section h2::before{content:"";width:7px;height:32px;border-radius:999px;background:var(--gold)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{border:1px solid #e7e9ee;border-radius:18px;padding:16px;background:#fff}.card.gold{background:linear-gradient(135deg,#fff7e6,#fff);border-color:#eed28f}.card strong{color:var(--navy)}
 .tabs{display:flex;gap:6px;overflow-x:auto;margin:8px 0 18px}.tab{border:1px solid #d8dde6;background:white;border-radius:12px;padding:10px 16px;cursor:pointer;font-weight:900;color:var(--navy);white-space:nowrap}.tab.active{background:var(--navy);color:var(--gold2);border-color:var(--navy)}
-.dayPanel{display:none}.dayPanel.active{display:block}.timeline{position:relative;margin-top:16px}.item{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid #edf0f4}.time{font-weight:900;color:var(--gold)}.itemText b{display:block;color:var(--navy);font-size:18px}.itemText small{color:var(--muted)}
-.spotGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}.spot{border:1px solid #e6e9ef;border-radius:20px;overflow:hidden;background:white;box-shadow:0 8px 24px rgba(6,23,43,.06)}.spot img{width:100%;height:190px;object-fit:cover;display:block;background:#dbe3eb}.spotBody{padding:15px}.spot h3{margin:0 0 8px;color:var(--navy);font-size:21px}.spot p{margin:6px 0;color:#4b5563;line-height:1.6}
+.dayPanel{display:none}.dayPanel.active{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.dayTitle{margin:0 0 8px;color:var(--navy);font-size:24px}.route{color:#9a6a13;font-weight:900;margin-bottom:10px}
+.timeline{position:relative}.item{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #edf0f4}.time{font-weight:900;color:var(--gold)}.itemText b{display:block;color:var(--navy);font-size:18px}.itemText small{color:var(--muted)}
+.dayPhotos{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.thumb{min-height:130px;border-radius:16px;background-size:cover;background-position:center;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:10px;color:white;font-weight:900}.thumb::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.72))}.thumb span{position:relative}
+.spotGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}.spot{border:1px solid #e6e9ef;border-radius:20px;overflow:hidden;background:white;box-shadow:0 8px 24px rgba(6,23,43,.06)}.spot img{width:100%;height:190px;object-fit:cover;display:block;background:#dbe3eb}.spotBody{padding:15px}.spot h3{margin:0 0 8px;color:var(--navy);font-size:21px}.spot p{margin:6px 0;color:#4b5563;line-height:1.6}.tag{display:inline-block;background:#fff2c9;color:#805b13;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:900;margin:5px 5px 0 0}
 .filterbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.filterbar button{border:0;border-radius:999px;background:#e7ebf0;color:var(--navy);padding:10px 14px;font-weight:900;cursor:pointer}.filterbar button.active{background:var(--gold)}
-.place[data-hide=true],.spot[data-hide=true]{display:none}.btn{display:inline-flex;align-items:center;justify-content:center;margin:8px 6px 0 0;padding:10px 14px;border-radius:12px;background:var(--navy);color:white;text-decoration:none;font-weight:900;border:0}.btn.gold{background:var(--gold);color:var(--navy)}
+.spot[data-hide=true]{display:none}.btn{display:inline-flex;align-items:center;justify-content:center;margin:8px 6px 0 0;padding:10px 14px;border-radius:12px;background:var(--navy);color:white;text-decoration:none;font-weight:900;border:0}.btn.gold{background:var(--gold);color:var(--navy)}
+.infoTable{width:100%;border-collapse:collapse}.infoTable td{padding:10px;border-bottom:1px solid #edf0f4}.infoTable td:first-child{color:#b58020;font-weight:900;width:100px}
 .bottom{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(6,23,43,.98);display:none;grid-template-columns:repeat(6,1fr);padding:8px 4px;border-radius:22px 22px 0 0}.bottom a{color:white;text-decoration:none;text-align:center;font-size:12px;font-weight:700}.bottom b{display:block;color:var(--gold2);font-size:19px}
-@media(max-width:900px){.nav{display:none}.quick{grid-template-columns:repeat(3,1fr);margin:-55px 16px 0}.bottom{display:grid}h1{letter-spacing:5px}.kicker{letter-spacing:6px;font-size:20px}.quick a{padding:16px 8px}.quick .icon{width:46px;height:46px}}
-@media(max-width:560px){.quick{grid-template-columns:repeat(2,1fr)}.topbar{padding:16px}.logo{width:82px;height:82px}.hero{min-height:500px}.spotGrid{grid-template-columns:1fr}.spot img{height:220px}.item{grid-template-columns:58px 1fr}main{padding-left:14px;padding-right:14px}.section{padding:20px}.section h2{font-size:26px}}
+footer{text-align:center;color:#697386;padding:26px 18px 90px}
+@media(max-width:900px){.nav{display:none}.quick{grid-template-columns:repeat(3,1fr);margin:-55px 16px 0}.bottom{display:grid}h1{letter-spacing:5px}.kicker{letter-spacing:6px;font-size:20px}.quick a{padding:16px 8px}.quick .icon{width:46px;height:46px}.dayPanel.active{grid-template-columns:1fr}.dayPhotos{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.quick{grid-template-columns:repeat(2,1fr)}.topbar{padding:16px}.logo{width:82px;height:82px}.hero{min-height:500px}.spotGrid{grid-template-columns:1fr}.spot img{height:220px}.item{grid-template-columns:58px 1fr}main{padding-left:14px;padding-right:14px}.section{padding:20px}.section h2{font-size:26px}.dayPhotos{grid-template-columns:1fr}.thumb{min-height:190px}}
 </style>
 </head>
 <body>
 <header class="hero" id="home">
-  <div class="topbar"><div class="brand"><img class="logo" src="haven-logo.png" alt="HAVEN Logo"><div><small>HAVEN</small>Travel Collection</div></div><nav class="nav"><a href="#itinerary">行程</a><a href="#photos">照片介紹</a><a href="#map">快速導航</a><a href="#hotel">住宿</a></nav></div>
+  <div class="topbar">
+    <div class="logoBrand"><img class="logo" src="haven-logo.png" alt="HAVEN Logo"><div><small>HAVEN</small>Travel Collection</div></div>
+    <nav class="nav"><a href="#itinerary">行程</a><a href="#photos">景點照片</a><a href="#map">導航</a><a href="#hotel">住宿</a><a href="#packing">準備</a></nav>
+  </div>
   <div class="heroContent"><div class="kicker">HAVEN</div><h1>香港 7 日遊</h1><div class="subtitle">HONG KONG 7 DAYS TRIP</div><div class="datePill">2026/08/05－2026/08/11</div><div style="margin-top:14px;font-size:20px;font-weight:800">👤 許智雄</div></div>
 </header>
 
@@ -46,52 +59,99 @@ main{max-width:1120px;margin:0 auto;padding:22px 18px 95px}.section{background:#
 </div>
 
 <main>
+<section class="section">
+  <h2>旅程總覽</h2>
+  <div class="cards">
+    <div class="card gold"><strong>去程</strong><br>05:35 高雄國際機場<br>09:10 香港國際機場</div>
+    <div class="card gold"><strong>回程</strong><br>18:40 香港國際機場<br>22:10 高雄國際機場</div>
+    <div class="card gold"><strong>住宿</strong><br>粵海華美灣際酒店<br>灣仔區</div>
+    <div class="card gold"><strong>主軸</strong><br>維港夜景｜香港美食｜亞洲國際博覽館｜城市巡禮</div>
+  </div>
+</section>
+
 <section class="section" id="itinerary">
 <h2>每日行程</h2>
 <div class="tabs">
 <button class="tab active" onclick="showDay(1,this)">DAY 1</button><button class="tab" onclick="showDay(2,this)">DAY 2</button><button class="tab" onclick="showDay(3,this)">DAY 3</button><button class="tab" onclick="showDay(4,this)">DAY 4</button><button class="tab" onclick="showDay(5,this)">DAY 5</button><button class="tab" onclick="showDay(6,this)">DAY 6</button><button class="tab" onclick="showDay(7,this)">DAY 7</button>
 </div>
-<div class="dayPanel active" id="day1"><h3>DAY 1｜初訪香港・維港夜景</h3><div class="timeline">
-<div class="item"><div class="time">05:35</div><div class="itemText"><b>高雄國際機場</b><small>搭乘班機前往香港</small></div></div>
-<div class="item"><div class="time">09:10</div><div class="itemText"><b>香港國際機場</b><small>抵達香港</small></div></div>
-<div class="item"><div class="time">11:00</div><div class="itemText"><b>粵海華美灣際酒店</b><small>辦理入住</small></div></div>
-<div class="item"><div class="time">12:09</div><div class="itemText"><b>華嫂冰室</b><small>港式冰室，推薦絲襪奶茶與菠蘿包</small></div></div>
-<div class="item"><div class="time">13:29</div><div class="itemText"><b>香港摩天輪</b><small>維港旁觀景設施</small></div></div>
-<div class="item"><div class="time">14:32</div><div class="itemText"><b>K11 MUSEA</b><small>藝術購物中心</small></div></div>
-<div class="item"><div class="time">16:36</div><div class="itemText"><b>星光大道</b><small>欣賞維港景色</small></div></div>
-<div class="item"><div class="time">17:56</div><div class="itemText"><b>女人街</b><small>香港街頭市集文化</small></div></div>
-<div class="item"><div class="time">20:50</div><div class="itemText"><b>蘭桂坊</b><small>香港夜生活體驗</small></div></div>
-</div></div>
-<div class="dayPanel" id="day2"><h3>DAY 2｜大嶼山與百萬夜景</h3><div class="timeline"><div class="item"><div class="time">10:13</div><div class="itemText"><b>昂坪360纜車</b><small>高空俯瞰大嶼山</small></div></div><div class="item"><div class="time">12:32</div><div class="itemText"><b>天壇大佛</b><small>香港著名地標</small></div></div><div class="item"><div class="time">16:40</div><div class="itemText"><b>山頂纜車</b><small>太平山百萬夜景</small></div></div><div class="item"><div class="time">19:28</div><div class="itemText"><b>甘牌燒鵝</b><small>人氣港式燒味</small></div></div></div></div>
-<div class="dayPanel" id="day3"><h3>DAY 3｜亞洲國際博覽館</h3><div class="timeline"><div class="item"><div class="time">09:54</div><div class="itemText"><b>亞洲國際博覽館</b><small>展覽與商務交流</small></div></div><div class="item"><div class="time">20:54</div><div class="itemText"><b>返回飯店</b><small>休息</small></div></div></div></div>
-<div class="dayPanel" id="day4"><h3>DAY 4｜亞洲國際博覽館</h3><div class="timeline"><div class="item"><div class="time">09:55</div><div class="itemText"><b>亞洲國際博覽館</b><small>展覽交流</small></div></div><div class="item"><div class="time">20:54</div><div class="itemText"><b>返回飯店</b><small>休息</small></div></div></div></div>
-<div class="dayPanel" id="day5"><h3>DAY 5｜亞洲國際博覽館</h3><div class="timeline"><div class="item"><div class="time">09:57</div><div class="itemText"><b>亞洲國際博覽館</b><small>展覽交流</small></div></div><div class="item"><div class="time">20:55</div><div class="itemText"><b>返回飯店</b><small>休息</small></div></div></div></div>
-<div class="dayPanel" id="day6"><h3>DAY 6｜亞洲國際博覽館</h3><div class="timeline"><div class="item"><div class="time">09:54</div><div class="itemText"><b>亞洲國際博覽館</b><small>最後一日展覽</small></div></div><div class="item"><div class="time">18:52</div><div class="itemText"><b>返回飯店</b><small>晚上自由活動</small></div></div></div></div>
-<div class="dayPanel" id="day7"><h3>DAY 7｜香港最後巡禮</h3><div class="timeline"><div class="item"><div class="time">10:10</div><div class="itemText"><b>蓮香樓</b><small>傳統港式飲茶</small></div></div><div class="item"><div class="time">11:56</div><div class="itemText"><b>銅鑼灣</b><small>百貨商圈購物</small></div></div><div class="item"><div class="time">15:12</div><div class="itemText"><b>怪獸大廈</b><small>IG熱門拍照景點</small></div></div><div class="item"><div class="time">18:40</div><div class="itemText"><b>香港國際機場</b><small>返回高雄</small></div></div></div></div>
+
+<div class="dayPanel active" id="day1">
+  <div><h3 class="dayTitle">DAY 1｜初訪香港・維港夜景</h3><div class="route">高雄 → 香港 → 灣仔 → 尖沙咀 → 旺角</div><div class="timeline">
+    <div class="item"><div class="time">05:35</div><div class="itemText"><b>高雄國際機場</b><small>搭乘班機前往香港</small></div></div>
+    <div class="item"><div class="time">09:10</div><div class="itemText"><b>香港國際機場</b><small>抵達香港</small></div></div>
+    <div class="item"><div class="time">12:09</div><div class="itemText"><b>華嫂冰室</b><small>港式冰室，推薦絲襪奶茶與菠蘿包</small></div></div>
+    <div class="item"><div class="time">13:29</div><div class="itemText"><b>香港摩天輪</b><small>中環海濱觀景設施</small></div></div>
+    <div class="item"><div class="time">14:32</div><div class="itemText"><b>K11 MUSEA</b><small>尖沙咀藝術購物地標</small></div></div>
+    <div class="item"><div class="time">16:36</div><div class="itemText"><b>星光大道</b><small>維港夜景與李小龍銅像</small></div></div>
+    <div class="item"><div class="time">17:56</div><div class="itemText"><b>女人街</b><small>旺角夜市購物</small></div></div>
+  </div></div>
+  <div class="dayPhotos">
+    <div class="thumb" style="background-image:url('images/hongkong-wheel.jpg')"><span>香港摩天輪</span></div>
+    <div class="thumb" style="background-image:url('images/k11-musea.jpg')"><span>K11 MUSEA</span></div>
+    <div class="thumb" style="background-image:url('images/avenue-stars.jpg')"><span>星光大道</span></div>
+    <div class="thumb" style="background-image:url('images/ladies-market.jpg')"><span>女人街</span></div>
+  </div>
+</div>
+
+<div class="dayPanel" id="day2">
+  <div><h3 class="dayTitle">DAY 2｜大嶼山與百萬夜景</h3><div class="route">灣仔 → 昂坪 → 天壇大佛 → 太平山</div><div class="timeline">
+    <div class="item"><div class="time">10:13</div><div class="itemText"><b>昂坪360纜車</b><small>高空俯瞰大嶼山與海景</small></div></div>
+    <div class="item"><div class="time">12:32</div><div class="itemText"><b>天壇大佛</b><small>香港代表性地標</small></div></div>
+    <div class="item"><div class="time">16:40</div><div class="itemText"><b>山頂纜車 Peak Tram</b><small>前往太平山欣賞百萬夜景</small></div></div>
+    <div class="item"><div class="time">19:28</div><div class="itemText"><b>甘牌燒鵝</b><small>人氣港式燒味晚餐</small></div></div>
+  </div></div>
+  <div class="dayPhotos">
+    <div class="thumb" style="background-image:url('images/ngongping360.jpg')"><span>昂坪360</span></div>
+    <div class="thumb" style="background-image:url('images/big-buddha.jpg')"><span>天壇大佛</span></div>
+    <div class="thumb" style="background-image:url('images/peak-tram.jpg')"><span>山頂纜車</span></div>
+    <div class="thumb" style="background-image:url('images/victoria-harbour.jpg')"><span>太平山夜景</span></div>
+  </div>
+</div>
+
+<div class="dayPanel" id="day3"><div><h3 class="dayTitle">DAY 3｜亞洲國際博覽館</h3><div class="timeline"><div class="item"><div class="time">09:54</div><div class="itemText"><b>亞洲國際博覽館</b><small>展覽與商務交流</small></div></div><div class="item"><div class="time">20:54</div><div class="itemText"><b>返回飯店</b><small>休息</small></div></div></div></div><div class="dayPhotos"><div class="thumb" style="background-image:url('images/asiaworld-expo.jpg')"><span>亞洲國際博覽館</span></div></div></div>
+<div class="dayPanel" id="day4"><div><h3 class="dayTitle">DAY 4｜亞洲國際博覽館</h3><div class="timeline"><div class="item"><div class="time">09:55</div><div class="itemText"><b>亞洲國際博覽館</b><small>展覽與產業交流</small></div></div><div class="item"><div class="time">20:54</div><div class="itemText"><b>返回飯店</b><small>休息</small></div></div></div></div><div class="dayPhotos"><div class="thumb" style="background-image:url('images/asiaworld-expo.jpg')"><span>亞洲國際博覽館</span></div></div></div>
+<div class="dayPanel" id="day5"><div><h3 class="dayTitle">DAY 5｜亞洲國際博覽館</h3><div class="timeline"><div class="item"><div class="time">09:57</div><div class="itemText"><b>亞洲國際博覽館</b><small>展覽交流</small></div></div><div class="item"><div class="time">20:55</div><div class="itemText"><b>返回飯店</b><small>休息</small></div></div></div></div><div class="dayPhotos"><div class="thumb" style="background-image:url('images/asiaworld-expo.jpg')"><span>亞洲國際博覽館</span></div></div></div>
+<div class="dayPanel" id="day6"><div><h3 class="dayTitle">DAY 6｜亞洲國際博覽館</h3><div class="timeline"><div class="item"><div class="time">09:54</div><div class="itemText"><b>亞洲國際博覽館</b><small>最後一日展覽行程</small></div></div><div class="item"><div class="time">18:52</div><div class="itemText"><b>返回飯店</b><small>晚上自由活動</small></div></div></div></div><div class="dayPhotos"><div class="thumb" style="background-image:url('images/asiaworld-expo.jpg')"><span>亞洲國際博覽館</span></div><div class="thumb" style="background-image:url('images/victoria-harbour.jpg')"><span>自由活動｜維港夜景</span></div></div></div>
+
+<div class="dayPanel" id="day7">
+  <div><h3 class="dayTitle">DAY 7｜香港最後巡禮</h3><div class="route">灣仔 → 中環 → 銅鑼灣 → 鰂魚涌 → 機場</div><div class="timeline">
+    <div class="item"><div class="time">10:10</div><div class="itemText"><b>蓮香樓</b><small>傳統港式飲茶</small></div></div>
+    <div class="item"><div class="time">11:56</div><div class="itemText"><b>銅鑼灣</b><small>百貨商圈購物</small></div></div>
+    <div class="item"><div class="time">15:12</div><div class="itemText"><b>怪獸大廈</b><small>IG熱門拍照景點</small></div></div>
+    <div class="item"><div class="time">18:40</div><div class="itemText"><b>香港國際機場</b><small>返回高雄</small></div></div>
+  </div></div>
+  <div class="dayPhotos">
+    <div class="thumb" style="background-image:url('images/linheunglau.jpg')"><span>蓮香樓</span></div>
+    <div class="thumb" style="background-image:url('images/causeway-bay.jpg')"><span>銅鑼灣</span></div>
+    <div class="thumb" style="background-image:url('images/monster-building.jpg')"><span>怪獸大廈</span></div>
+  </div>
+</div>
 </section>
 
 <section class="section" id="photos">
 <h2>景點照片與介紹</h2>
 <div class="filterbar"><button class="active" onclick="filterSpots('all',this)">全部</button><button onclick="filterSpots('day1',this)">DAY 1</button><button onclick="filterSpots('day2',this)">DAY 2</button><button onclick="filterSpots('expo',this)">博覽館</button><button onclick="filterSpots('day7',this)">DAY 7</button></div>
 <div class="spotGrid">
-<article class="spot" data-cat="day1"><img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>維多利亞港</h3><p>香港最經典夜景，適合拍攝天際線與海港燈光。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/維多利亞港">開地圖</a></div></article>
-<article class="spot" data-cat="day1"><img src="https://images.unsplash.com/photo-1506970845246-18f21d533b20?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>香港摩天輪</h3><p>位於中環海濱，可欣賞維港與港島高樓景色。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/香港摩天輪">開地圖</a></div></article>
-<article class="spot" data-cat="day1"><img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>K11 MUSEA</h3><p>尖沙咀藝術購物地標，適合逛街、拍照與喝咖啡。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/K11 MUSEA">開地圖</a></div></article>
-<article class="spot" data-cat="day1"><img src="https://images.unsplash.com/photo-1553603227-2358aabe821e?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>女人街</h3><p>旺角人氣夜市，適合買紀念品與體驗香港街頭文化。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/女人街 香港">開地圖</a></div></article>
-<article class="spot" data-cat="day2"><img src="https://images.unsplash.com/photo-1565060319437-92552d4f6404?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>昂坪360纜車</h3><p>高空纜車可俯瞰大嶼山、海景與機場周邊。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/昂坪360">開地圖</a></div></article>
-<article class="spot" data-cat="day2"><img src="https://images.unsplash.com/photo-1598760122223-45f0f18a1bbd?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>天壇大佛</h3><p>香港代表性地標，建議搭配寶蓮禪寺與昂坪市集。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/天壇大佛">開地圖</a></div></article>
-<article class="spot" data-cat="day2"><img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>山頂纜車</h3><p>前往太平山欣賞香港百萬夜景的經典交通體驗。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/Peak Tram Hong Kong">開地圖</a></div></article>
-<article class="spot" data-cat="expo"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>亞洲國際博覽館</h3><p>DAY 3－DAY 6 主要活動場館，適合展覽與商務交流。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/亞洲國際博覽館">開地圖</a></div></article>
-<article class="spot" data-cat="day7"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>蓮香樓</h3><p>傳統港式茶樓，體驗蝦餃、燒賣與老香港飲茶文化。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/Lin Heung Tea House Hong Kong">開地圖</a></div></article>
-<article class="spot" data-cat="day7"><img src="https://images.unsplash.com/photo-1518593921371-1664b7e079cc?auto=format&fit=crop&w=900&q=80"><div class="spotBody"><h3>怪獸大廈</h3><p>鰂魚涌知名攝影景點，展現香港密集住宅城市感。</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/Monster Building Hong Kong">開地圖</a></div></article>
+<article class="spot" data-cat="day1"><img src="images/victoria-harbour.jpg"><div class="spotBody"><h3>維多利亞港</h3><p>香港最經典夜景，適合拍攝天際線與海港燈光，是香港行程最有代表性的畫面。</p><span class="tag">夜景</span><span class="tag">維港</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/維多利亞港">開地圖</a></div></article>
+<article class="spot" data-cat="day1"><img src="images/hongkong-wheel.jpg"><div class="spotBody"><h3>香港摩天輪</h3><p>位於中環海濱，可欣賞維港與港島高樓景色，黃昏時段最適合拍照。</p><span class="tag">觀景</span><span class="tag">中環</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/香港摩天輪">開地圖</a></div></article>
+<article class="spot" data-cat="day1"><img src="images/k11-musea.jpg"><div class="spotBody"><h3>K11 MUSEA</h3><p>尖沙咀藝術購物地標，結合精品、藝術、建築與餐飲，適合逛街與拍照。</p><span class="tag">購物</span><span class="tag">藝術</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/K11 MUSEA">開地圖</a></div></article>
+<article class="spot" data-cat="day1"><img src="images/avenue-stars.jpg"><div class="spotBody"><h3>星光大道</h3><p>維港旁經典散步路線，可欣賞香港島夜景與李小龍銅像。</p><span class="tag">海濱</span><span class="tag">夜景</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/星光大道 香港">開地圖</a></div></article>
+<article class="spot" data-cat="day1"><img src="images/ladies-market.jpg"><div class="spotBody"><h3>女人街</h3><p>旺角人氣夜市，適合買紀念品、小物與體驗香港街頭市集文化。</p><span class="tag">夜市</span><span class="tag">購物</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/女人街 香港">開地圖</a></div></article>
+<article class="spot" data-cat="day2"><img src="images/ngongping360.jpg"><div class="spotBody"><h3>昂坪360纜車</h3><p>高空纜車可俯瞰大嶼山、海景與機場周邊，是第二天的重點體驗。</p><span class="tag">纜車</span><span class="tag">大嶼山</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/昂坪360">開地圖</a></div></article>
+<article class="spot" data-cat="day2"><img src="images/big-buddha.jpg"><div class="spotBody"><h3>天壇大佛</h3><p>香港代表性地標，氣勢莊嚴，建議搭配寶蓮禪寺與昂坪市集一起安排。</p><span class="tag">地標</span><span class="tag">祈福</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/天壇大佛">開地圖</a></div></article>
+<article class="spot" data-cat="day2"><img src="images/peak-tram.jpg"><div class="spotBody"><h3>山頂纜車 Peak Tram</h3><p>前往太平山欣賞香港百萬夜景的經典交通體驗，視野非常有代表性。</p><span class="tag">百萬夜景</span><span class="tag">太平山</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/Peak Tram Hong Kong">開地圖</a></div></article>
+<article class="spot" data-cat="expo"><img src="images/asiaworld-expo.jpg"><div class="spotBody"><h3>亞洲國際博覽館</h3><p>DAY 3－DAY 6 主要活動場館，適合展覽、商務交流與產業觀察。</p><span class="tag">展覽</span><span class="tag">商務</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/亞洲國際博覽館">開地圖</a></div></article>
+<article class="spot" data-cat="day7"><img src="images/linheunglau.jpg"><div class="spotBody"><h3>蓮香樓 Lin Heung Tea House</h3><p>傳統港式茶樓，適合體驗蝦餃、燒賣、叉燒包與老香港飲茶文化。</p><span class="tag">飲茶</span><span class="tag">早午餐</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/Lin Heung Tea House Hong Kong">開地圖</a></div></article>
+<article class="spot" data-cat="day7"><img src="images/causeway-bay.jpg"><div class="spotBody"><h3>銅鑼灣</h3><p>香港購物核心區，聚集百貨、商場與餐廳，適合最後一天補買伴手禮。</p><span class="tag">購物</span><span class="tag">百貨</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/銅鑼灣">開地圖</a></div></article>
+<article class="spot" data-cat="day7"><img src="images/monster-building.jpg"><div class="spotBody"><h3>怪獸大廈 Monster Building</h3><p>鰂魚涌知名攝影景點，展現香港密集住宅與城市壓縮感。</p><span class="tag">攝影</span><span class="tag">IG景點</span><br><a class="btn" target="_blank" href="https://www.google.com/maps/search/Monster Building Hong Kong">開地圖</a></div></article>
 </div>
 </section>
 
-<section class="section" id="map"><h2>景點美食快速導航</h2><div class="cards">
-<div class="card"><strong>華嫂冰室</strong><br>港式冰室<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/華嫂冰室 灣仔">開地圖</a></div>
-<div class="card"><strong>K11 MUSEA</strong><br>藝術購物中心<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/K11 MUSEA">開地圖</a></div>
-<div class="card"><strong>女人街</strong><br>購物市集<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/女人街 香港">開地圖</a></div>
-<div class="card"><strong>甘牌燒鵝</strong><br>香港人氣燒味<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/甘牌燒鵝">開地圖</a></div>
+<section class="section" id="map"><h2>Google Maps 快速導航</h2><div class="cards">
+<div class="card"><strong>飯店</strong><br>粵海華美灣際酒店<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/粵海華美灣際酒店">開地圖</a></div>
+<div class="card"><strong>亞洲國際博覽館</strong><br>DAY 3－DAY 6 主會場<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/亞洲國際博覽館">開地圖</a></div>
+<div class="card"><strong>太平山</strong><br>百萬夜景<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/Peak Tram Hong Kong">開地圖</a></div>
+<div class="card"><strong>怪獸大廈</strong><br>攝影景點<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/Monster Building Hong Kong">開地圖</a></div>
 </div></section>
 
 <section class="section" id="hotel"><h2>住宿資訊</h2><div class="card gold"><strong>粵海華美灣際酒店</strong><br>住宿區域：灣仔區。前往中環、尖沙咀、銅鑼灣與亞洲國際博覽館交通便利。<br><a class="btn gold" target="_blank" href="https://www.google.com/maps/search/粵海華美灣際酒店">查看飯店地圖</a></div></section>
@@ -100,6 +160,7 @@ main{max-width:1120px;margin:0 auto;padding:22px 18px 95px}.section{background:#
 </main>
 
 <div class="bottom"><a href="#home"><b>⌂</b>首頁</a><a href="#itinerary"><b>▣</b>行程</a><a href="#photos"><b>▧</b>照片</a><a href="#map"><b>◎</b>導航</a><a href="#hotel"><b>▥</b>住宿</a><a href="#emergency"><b>☎</b>聯絡</a></div>
+<footer>© 2026 HAVEN Travel Collection｜香港 7 日遊</footer>
 <script>
 function showDay(n,btn){document.querySelectorAll('.dayPanel').forEach(p=>p.classList.remove('active'));document.querySelector('#day'+n).classList.add('active');document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active')}
 function filterSpots(cat,btn){document.querySelectorAll('#photos .filterbar button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.spot').forEach(card=>{const show=cat==='all'||card.dataset.cat===cat;card.setAttribute('data-hide',show?'false':'true')})}
