@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAVEN 香港7日互動旅遊手冊</title>
+  <style>
+    :root{
+      --navy:#071a2f;
+      --navy2:#0d2b4c;
+      --gold:#d9a441;
+      --cream:#fff8ea;
+      --white:#ffffff;
+      --gray:#eef2f5;
+      --text:#1c2630;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background:linear-gradient(180deg,var(--navy),#06111f 360px,var(--gray) 360px);
+      color:var(--text);
+    }
+    header{
+      padding:26px 18px 20px;
+      color:white;
+      text-align:center;
+    }
+    .logo{
+      width:118px;
+      height:118px;
+      object-fit:contain;
+      margin:0 auto 10px;
+      display:block;
+      filter:drop-shadow(0 8px 18px rgba(0,0,0,.35));
+    }
+    .hero h1{
+      margin:4px 0;
+      font-size:30px;
+      letter-spacing:1px;
+    }
+    .hero p{
+      margin:6px 0;
+      opacity:.9;
+    }
+    .badge{
+      display:inline-block;
+      margin-top:10px;
+      padding:7px 14px;
+      border:1px solid rgba(217,164,65,.8);
+      border-radius:999px;
+      color:var(--gold);
+      background:rgba(255,255,255,.08);
+      font-weight:700;
+    }
+    nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(7,26,47,.96);
+      backdrop-filter:blur(8px);
+      padding:8px;
+      display:flex;
+      gap:8px;
+      overflow-x:auto;
+      box-shadow:0 6px 18px rgba(0,0,0,.2);
+    }
+    nav a{
+      flex:0 0 auto;
+      text-decoration:none;
+      color:white;
+      border:1px solid rgba(255,255,255,.18);
+      padding:9px 13px;
+      border-radius:999px;
+      font-size:14px;
+    }
+    nav a:hover{background:var(--gold);color:#071a2f}
+    main{
+      max-width:960px;
+      margin:auto;
+      padding:18px;
+      padding-bottom:80px;
+    }
+    section{
+      background:white;
+      border-radius:22px;
+      padding:20px;
+      margin:16px 0;
+      box-shadow:0 10px 28px rgba(7,26,47,.10);
+      border:1px solid rgba(7,26,47,.06);
+    }
+    h2{
+      margin:0 0 14px;
+      color:var(--navy);
+      font-size:24px;
+      border-left:6px solid var(--gold);
+      padding-left:10px;
+    }
+    h3{color:var(--navy2);margin:12px 0 6px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:12px;
+    }
+    .card{
+      background:var(--cream);
+      border-radius:16px;
+      padding:14px;
+      border:1px solid #f1ddad;
+    }
+    .card strong{color:var(--navy)}
+    .day{
+      border-left:4px solid var(--gold);
+      padding:12px 0 12px 14px;
+      margin:12px 0;
+      background:#fbfcfe;
+      border-radius:0 14px 14px 0;
+    }
+    .time{
+      display:inline-block;
+      min-width:58px;
+      color:var(--gold);
+      font-weight:800;
+    }
+    ul{padding-left:20px}
+    li{margin:7px 0}
+    .btn{
+      display:inline-block;
+      margin:6px 6px 0 0;
+      padding:10px 14px;
+      border-radius:12px;
+      background:var(--navy);
+      color:white;
+      text-decoration:none;
+      font-weight:700;
+    }
+    .btn.gold{background:var(--gold);color:var(--navy)}
+    .filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+    .filterbar button{
+      border:0;
+      border-radius:999px;
+      padding:9px 13px;
+      background:#e9edf2;
+      color:var(--navy);
+      font-weight:700;
+      cursor:pointer;
+    }
+    .filterbar button.active{background:var(--gold)}
+    .place[data-hide="true"]{display:none}
+    footer{
+      text-align:center;
+      padding:28px 18px;
+      color:#718096;
+    }
+    .bottom{
+      position:fixed;
+      left:0;right:0;bottom:0;
+      background:rgba(7,26,47,.98);
+      display:flex;
+      justify-content:space-around;
+      padding:8px 6px;
+      z-index:20;
+    }
+    .bottom a{
+      color:white;
+      text-decoration:none;
+      font-size:12px;
+      text-align:center;
+      padding:4px 8px;
+    }
+    @media print{
+      nav,.bottom,.btn,.filterbar{display:none}
+      body{background:white}
+      section{break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img class="logo" src="haven-logo.png" alt="HAVEN Logo">
+    <h1>香港 7 日互動旅遊手冊</h1>
+    <p>2026/08/05－2026/08/11｜許智雄</p>
+    <div class="badge">HAVEN Travel Collection</div>
+  </header>
+
+  <nav>
+    <a href="#overview">總覽</a>
+    <a href="#itinerary">每日行程</a>
+    <a href="#places">景點美食</a>
+    <a href="#hotel">住宿</a>
+    <a href="#packing">行前準備</a>
+    <a href="#emergency">緊急資訊</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>旅程總覽</h2>
+      <div class="grid">
+        <div class="card"><strong>去程</strong><br>05:35 高雄國際機場<br>09:10 香港國際機場</div>
+        <div class="card"><strong>回程</strong><br>18:40 香港國際機場<br>22:10 高雄國際機場</div>
+        <div class="card"><strong>住宿</strong><br>粵海華美灣際酒店<br>灣仔區</div>
+        <div class="card"><strong>主軸</strong><br>維港夜景、香港美食、亞洲國際博覽館、城市巡禮</div>
+      </div>
+      <a class="btn gold" href="#itinerary">查看每日行程</a>
+      <a class="btn" href="https://www.google.com/maps/search/粵海華美灣際酒店" target="_blank">開啟飯店地圖</a>
+    </section>
+
+    <section id="itinerary">
+      <h2>每日行程</h2>
+
+      <div class="day">
+        <h3>DAY 1｜08/05 初訪香港・維港夜景</h3>
+        <p><span class="time">05:35</span>高雄國際機場</p>
+        <p><span class="time">09:10</span>香港國際機場</p>
+        <p><span class="time">11:00</span>粵海華美灣際酒店</p>
+        <p><span class="time">12:09</span>華嫂冰室（灣仔）</p>
+        <p><span class="time">13:29</span>香港摩天輪</p>
+        <p><span class="time">14:32</span>K11 MUSEA</p>
+        <p><span class="time">16:36</span>星光大道</p>
+        <p><span class="time">17:56</span>女人街</p>
+        <p><span class="time">19:32</span>肥姐小食</p>
+        <p><span class="time">20:50</span>蘭桂坊</p>
+      </div>
+
+      <div class="day">
+        <h3>DAY 2｜08/06 大嶼山 × 太平山夜景</h3>
+        <p><span class="time">08:00</span>飯店出發</p>
+        <p><span class="time">10:13</span>昂坪360纜車</p>
+        <p><span class="time">12:32</span>天壇大佛</p>
+        <p><span class="time">16:40</span>山頂纜車 Peak Tram</p>
+        <p><span class="time">19:28</span>甘牌燒鵝</p>
+      </div>
+
+      <div class="day"><h3>DAY 3｜08/07 亞洲國際博覽館</h3><p><span class="time">09:54</span>亞洲國際博覽館</p><p><span class="time">20:54</span>返回飯店</p></div>
+      <div class="day"><h3>DAY 4｜08/08 亞洲國際博覽館</h3><p><span class="time">09:55</span>亞洲國際博覽館</p><p><span class="time">20:54</span>返回飯店</p></div>
+      <div class="day"><h3>DAY 5｜08/09 亞洲國際博覽館</h3><p><span class="time">09:57</span>亞洲國際博覽館</p><p><span class="time">20:55</span>返回飯店</p></div>
+      <div class="day"><h3>DAY 6｜08/10 亞洲國際博覽館</h3><p><span class="time">09:54</span>亞洲國際博覽館</p><p><span class="time">18:52</span>返回飯店，自由活動</p></div>
+
+      <div class="day">
+        <h3>DAY 7｜08/11 香港最後巡禮</h3>
+        <p><span class="time">09:00</span>飯店退房</p>
+        <p><span class="time">10:10</span>蓮香樓 Lin Heung Tea House</p>
+        <p><span class="time">11:56</span>銅鑼灣</p>
+        <p><span class="time">15:12</span>怪獸大廈 Monster Building</p>
+        <p><span class="time">16:22</span>返回飯店取行李</p>
+        <p><span class="time">18:40</span>香港國際機場</p>
+        <p><span class="time">22:10</span>高雄國際機場</p>
+      </div>
+    </section>
+
+    <section id="places">
+      <h2>景點與美食</h2>
+      <div class="filterbar">
+        <button class="active" onclick="filterPlaces('all', this)">全部</button>
+        <button onclick="filterPlaces('food', this)">美食</button>
+        <button onclick="filterPlaces('view', this)">景點</button>
+        <button onclick="filterPlaces('shopping', this)">購物</button>
+        <button onclick="filterPlaces('event', this)">活動</button>
+      </div>
+      <div class="grid">
+        <div class="card place" data-cat="food"><strong>華嫂冰室</strong><br>菠蘿包、絲襪奶茶、豬扒包<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/華嫂冰室 灣仔">地圖</a></div>
+        <div class="card place" data-cat="view"><strong>香港摩天輪</strong><br>維港旁經典景點<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/香港摩天輪">地圖</a></div>
+        <div class="card place" data-cat="shopping"><strong>K11 MUSEA</strong><br>藝術感購物中心<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/K11 MUSEA">地圖</a></div>
+        <div class="card place" data-cat="view"><strong>星光大道</strong><br>維多利亞港夜景<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/星光大道 香港">地圖</a></div>
+        <div class="card place" data-cat="shopping"><strong>女人街</strong><br>香港市集文化<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/女人街 香港">地圖</a></div>
+        <div class="card place" data-cat="food"><strong>甘牌燒鵝</strong><br>香港必吃燒鵝名店<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/甘牌燒鵝">地圖</a></div>
+        <div class="card place" data-cat="view"><strong>昂坪360</strong><br>纜車與大嶼山景色<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/昂坪360">地圖</a></div>
+        <div class="card place" data-cat="event"><strong>亞洲國際博覽館</strong><br>展覽與交流活動<br><a class="btn" target="_blank" href="https://www.google.com/maps/search/亞洲國際博覽館">地圖</a></div>
+      </div>
+    </section>
+
+    <section id="hotel">
+      <h2>住宿資訊</h2>
+      <div class="card">
+        <h3>粵海華美灣際酒店</h3>
+        <p>住宿區域：灣仔。前往中環、尖沙咀、銅鑼灣與會展交通方便。</p>
+        <a class="btn gold" href="https://www.google.com/maps/search/粵海華美灣際酒店" target="_blank">開啟 Google 地圖</a>
+      </div>
+    </section>
+
+    <section id="packing">
+      <h2>行前準備</h2>
+      <ul>
+        <li>證件：護照、台胞證/入境相關文件、機票資料</li>
+        <li>交通：八達通卡、Google Maps、MTR Mobile</li>
+        <li>通訊：eSIM 或漫遊方案</li>
+        <li>電源：英規三腳轉接頭、行動電源</li>
+        <li>金錢：港幣現金、信用卡、行動支付</li>
+        <li>穿搭：輕便服裝、舒適鞋、薄外套</li>
+      </ul>
+    </section>
+
+    <section id="emergency">
+      <h2>緊急資訊</h2>
+      <div class="grid">
+        <div class="card"><strong>香港緊急電話</strong><br>999</div>
+        <div class="card"><strong>旅遊建議</strong><br>護照與重要資料拍照備份，現金分開放。</div>
+        <div class="card"><strong>HAVEN提醒</strong><br>出門注意安全，行程保留彈性，滿載而歸。</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="bottom">
+    <a href="#overview">總覽</a>
+    <a href="#itinerary">行程</a>
+    <a href="#places">景點</a>
+    <a href="#hotel">住宿</a>
+    <a href="#packing">準備</a>
+  </div>
+
+  <footer>
+    HAVEN Travel Collection｜香港 7 日遊｜2026
+  </footer>
+
+  <script>
+    function filterPlaces(cat, btn){
+      document.querySelectorAll('.filterbar button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.place').forEach(card=>{
+        const show = cat === 'all' || card.dataset.cat === cat;
+        card.setAttribute('data-hide', show ? 'false' : 'true');
+      });
+    }
+  </script>
+</body>
+</html>
